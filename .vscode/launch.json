@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Launch Program",
+        "skipFiles": ["<node_internals>/**"],
+        "program": "${workspaceFolder}/dist/index.js", // 指向编译后的 JavaScript 文件
+        "outFiles": ["${workspaceFolder}/dist/**/*.js"], // 指向输出目录
+        "preLaunchTask": "tsc: build - tsconfig.json" // 在调试前编译 TypeScript
+      }
+    ]
+  }
