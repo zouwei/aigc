@@ -1,10 +1,14 @@
 import { Router } from 'express';
-import { getUsers, getUserById, createUser } from '../controllers/userController';
+import * as userController from '../controllers/userController';
 
 const router = Router();
+// 测试方法
+router.get('/ai', userController.ai);
 
-router.get('/', getUsers);
-router.get('/:id', getUserById);
-router.post('/', createUser);
+router.get('/', userController.getUsers);
+router.get('/:id', userController.getUserById);
+router.post('/', userController.createUser);
+
+
 
 export default router;
